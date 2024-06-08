@@ -1,0 +1,8 @@
+#craeting a ci-cd pipeline for github actions
+run_tests:
+  image: python:3.9-slim-buster
+  before_script:
+    - apt-get update && apt-get install -y make
+    
+  script:
+    - make test
